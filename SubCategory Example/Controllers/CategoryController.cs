@@ -72,7 +72,7 @@ namespace Shop.Controllers
         // Updates an existing category.
 
         [HttpPut("UpdateCategory/{id}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> PutCategory(int id, CategoryCreateDTO categoryDto)
         {
             var success = await _categoryService.PutCategory(id, categoryDto);
@@ -88,11 +88,9 @@ namespace Shop.Controllers
         // Deletes a category by ID.
 
         [HttpDelete("DeleteCategory/{id}")]
-        [Authorize(Roles = "Admin")]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteCategory(int id)
         {
-
-
             var success = await _categoryService.DeleteCategory(id);
             if (!success)
             {

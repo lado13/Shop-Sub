@@ -188,6 +188,7 @@ namespace Shop.Service
                                                 Id = p.ProductId,
                                                 Name = p.Name,
                                                 Price = p.Price,
+                                                ImagePath = p.Image
 
                                             })
                                             .ToListAsync();
@@ -207,10 +208,6 @@ namespace Shop.Service
 
         public async Task<IEnumerable<ProductDTO>> GetProductsBySubCategory(int subcategoryId)
         {
-            // Implement logic to retrieve products based on the provided subcategoryId
-            // This might involve accessing a database or other data source
-
-            // Example (replace with your actual implementation):
             IEnumerable<ProductDTO> products = await _context.Products
                 .Where(p => p.SubcategoryId == subcategoryId)
                 .Select(p => new ProductDTO
@@ -219,7 +216,6 @@ namespace Shop.Service
                     Name = p.Name,
                     Price = p.Price,
                     ImagePath = p.Image,
-                    // ... other product properties to include in the DTO
                     SubcategoryId = p.SubcategoryId
                 })
                 .ToListAsync();

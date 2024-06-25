@@ -44,10 +44,6 @@ namespace Shop.Service
             user.Name = model.Name;
             user.Avatar = model.Avatar; 
 
-
-            // If a new avatar image is provided, save it.
-            
-
             // Update the user in the database.
             var result = await _userManager.UpdateAsync(user);
             return result.Succeeded;

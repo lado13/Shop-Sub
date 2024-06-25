@@ -71,7 +71,7 @@ namespace Shop.Controllers
         // Updates an existing product by ID.
 
         [HttpPut("PutProduct/{id}")]
-        public async Task<IActionResult> PutProduct(int id, [FromQuery] ProductDTO productDto)
+        public async Task<IActionResult> PutProduct(int id, ProductDTO productDto)
         {
             var success = await _productService.PutProduct(id, productDto);
             if (success)
@@ -106,7 +106,7 @@ namespace Shop.Controllers
         // Searches for products by title.
 
         [HttpGet("SearchProductByTitle")]
-        public async Task<ActionResult<IEnumerable<ProductDTO>>> SearchProductsByTitle([FromQuery] string title)
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> SearchProductsByTitle(string title)
         {
 
             var products = await _productService.SearchProductsByTitle(title);

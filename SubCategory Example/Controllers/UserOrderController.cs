@@ -88,7 +88,6 @@ namespace Shop.Controllers
                     FirstName = order.Users.Name,
                     LastName = order.Users.Lastname,
                     Email = order.Users.Email,
-                    //Role = order.Users.Role,
                     ProductId = order.ProductId,
                     Image = order.Products.Image,
                     Title = order.Products.Name,
