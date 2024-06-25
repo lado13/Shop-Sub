@@ -1,0 +1,1 @@
+Welcome to the Online Shop Web API! This API serves as the backend for an online shopping platform, providing endpoints for managing products, catgories, subcategories orders, and user authentication.
